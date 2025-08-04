@@ -41,7 +41,7 @@ nav {
     background-color: #1a1a1a;
     padding: 10px 0;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 20px;
     border-bottom: 1px solid #333;
 }
