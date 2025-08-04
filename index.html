@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +7,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #0f0f0f;
-            color: #ffffff;
+            background-color: #111;
+            color: #eee;
             margin: 0;
-            padding: 0;
         }
         header {
             background-color: #1a1a1a;
@@ -18,43 +18,74 @@
         }
         header img {
             width: 100px;
-            height: auto;
         }
         nav {
-            margin-top: 10px;
+            background-color: #222;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
-        nav a {
-            margin: 0 15px;
+        nav button {
+            background: none;
+            border: none;
             color: #ccc;
-            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        nav button:hover {
+            background-color: #333;
         }
         section {
-            padding: 40px;
+            display: none;
+            padding: 30px;
+        }
+        section.active {
+            display: block;
         }
         h2 {
+            color: #00adee;
             border-bottom: 1px solid #333;
             padding-bottom: 10px;
         }
-        .bug-report {
-            margin-top: 20px;
+        ul {
+            line-height: 1.8;
         }
-        .bug-report a {
+        a {
             color: #00adee;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="./logo.png" alt="Triumphant Dev Group Logo">
-        <h1>Triumphant Development Group</h1>
-        <nav>
-            <a href="#updates">Upcoming Updates</a>
-            <a href="#timeline">Development Timeline</a>
-            <a href="#bugs">Known Bugs</a>
-            <a href="#report">Report a Bug</a>
-        </nav>
-    </header>
+
+<header>
+    <img src="assets/logo.png" alt="Logo">
+    <h1>Triumphant Development Group</h1>
+</header>
+
+<nav>
+    <button onclick="showTab('home')">Home</button>
+    <button onclick="showTab('updates')">Development Roadmap</button>
+    <button onclick="showTab('about')">Staff Team</button>
+    <button onclick="showTab('join')">Join Us</button>
+</nav>
+
+<section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>Welcome to Triumphant Development Group — a passionate indie studio building immersive, emotional, and tactically rich games.</p>
+    <p>Explore our roadmap, meet the team, and see how you can get involved in our growing community of creators and players.</p>
+
+    <h3>🎮 Our Projects</h3>
+
+    <p><strong>Iron Horizon</strong> – A hyper-realistic FPS set in a near-future Southeast U.S. following a brutal invasion. Fight as one of five friends turned resistance fighters in a massive 1:1 scale sandbox map across Florida, Georgia, and Alabama. With realistic gunplay, tactical survival, and emotional storytelling, Iron Horizon is our flagship narrative combat experience.</p>
+
+    <p><strong>Cypress Root</strong> – A peaceful yet demanding life-sim RPG inspired by *Stardew Valley* and *Harvest Moon*. You escape the noise of city life only to find a forgotten rural town in desperate need of revival. Raise livestock, grow crops, fish, hunt, and build relationships in a Florida forest community shaped by your choices.</p>
+
+    <p><strong>Roots of Silence</strong> – A narrative-driven coming-of-age story set in the Everglades. Follow Jason from age 5 to 17 as he navigates a world of trauma, violence, and survival. This emotional game explores childhood hardship, resilience, and the small moments of light that break through the darkness.</p>
+
+    <p><strong>Shielded</strong> – An open-world police simulator where realism and moral consequence collide. Patrol streets, handle traffic stops, respond to domestic violence calls, and face the emotional cost of the badge. Choose to uphold your oath or walk a darker path in a game built on trust, trauma, and the thin line between justice and failure.</p>
+</section>
+
 
 <section id="updates">
     <h2>Development Roadmap</h2>
@@ -186,21 +217,38 @@
     </article>
 </section>
 
+<section id="about">
+    <h2>About Us – Staff Team</h2>
+    <ul>
+        <li><strong>GHOSTLYxKNIGHT</strong> – Lead Developer & CEO, Storyline Artist</li>
+        <li><strong>mistanastytime904</strong> – CFO, Gameplay Engineer, Marketing Lead, Head of HR</li>
+        <li><strong>xWASDChris</strong> – Administrative Recruiter, Lead Graphic Artist, Mission Engineer</li>
+        <li><strong>Shurmm</strong> – Community Relations & Payroll Lead, Mission Dialogue Designer</li>
+        <li><strong>iiAmRenegade</strong> – Community Engagement, Public Relations, Staff Hiring</li>
+        <li><strong>Luntac</strong> – QA Lead, Bug & Exploit Tracking</li>
+    </ul>
+</section>
 
+<section id="join">
+    <h2>Join Us</h2>
+    <p>Join our Discord to follow development, get sneak peeks, report bugs, or even help us test and build new features.</p>
+    <p>Upcoming projects include:</p>
+    <ul>
+        <li><strong>Iron Horizon</strong> – A hyper-realistic FPS set in the modern Southeast U.S.</li>
+        <li><strong>Cypress Root</strong> – A peaceful life-sim set in rural Florida</li>
+        <li><strong>Roots of Silence</strong> – A gritty childhood survival story</li>
+        <li><strong>Shielded</strong> – A grounded police simulator with a morality system</li>
+    </ul>
+    <p><a href="https://discord.gg/JcEppb2M87" target="_blank">💬 Join Our Discord</a></p>
+</section>
 
-    <section id="bugs">
-        <h2>Known Bugs</h2>
-        <ul>
-            <li>Healing UI doesn't update in multiplayer</li>
-            <li>Inventory sometimes duplicates when rapidly dragging items</li>
-            <li>Hotbar shortcuts fail if item is moved</li>
-        </ul>
-    </section>
+<script>
+function showTab(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
 
-    <section id="report" class="bug-report">
-        <h2>Report a Bug</h2>
-        <p>🐛 Found a bug? Help us improve by reporting it on our Discord server.</p>
-        <p><a href="https://discord.gg/JcEppb2M87" target="_blank">Join our Discord</a></p>
-    </section>
 </body>
 </html>
