@@ -41,10 +41,10 @@ header {
 }
 
 .header-content p {
-    font-size: 24px; /* tripled from 12px */
+    font-size: 72px; /* tripled from 12px */
     margin: 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
 
