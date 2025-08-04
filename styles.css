@@ -12,12 +12,12 @@ header {
     padding: 20px;
 }
 header img {
-    max-width: 120px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
-h1 {
-    margin: 10px 0;
-}
+
 section {
     padding: 40px 20px;
 }
