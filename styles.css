@@ -33,3 +33,46 @@ a.button {
 a.button:hover {
     background-color: #0056b3;
 }
+
+nav {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid #333;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: #fff;
+    border-bottom: 2px solid #007bff;
+}
+
+section {
+    display: none;
+    max-width: 900px;
+    margin: auto;
+}
+
+section.active {
+    display: block;
+}
+
+section {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+section.active {
+    opacity: 1;
+}
+
