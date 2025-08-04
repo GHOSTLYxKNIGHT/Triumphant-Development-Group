@@ -81,3 +81,10 @@ section.active {
     opacity: 1;
 }
 
+header h1,
+header p,
+section h2,
+section h3,
+section p {
+    text-align: left;
+}
