@@ -22,27 +22,6 @@ header {
     padding-bottom: 10px; /* Controls how close text is to bottom */
 }
 
-.header-content {
-    text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4); /* optional: contrast overlay */
-    padding: 5px 15px;
-    border-radius: 6px;
-}
-
-.header-content h1 {
-    font-size: 20px;
-    margin: 0;
-    letter-spacing: 2px;
-}
-
-.header-content p {
-    font-size: 12px;
-    margin: 2px 0 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
 
 /* Section Styling */
 section {
