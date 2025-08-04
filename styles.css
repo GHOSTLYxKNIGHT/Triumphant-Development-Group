@@ -17,7 +17,7 @@ header {
     background-position: center bottom; /* Show more water */
     background-repeat: no-repeat;
     display: flex;
-    align-items: flex-end; /* Push content to bottom */
+    align-items: center; /* Push content to bottom */
     justify-content: center;
     padding-bottom: 10px; /* Controls how close text is to bottom */
 }
