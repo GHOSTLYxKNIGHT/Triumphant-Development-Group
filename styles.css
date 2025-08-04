@@ -8,11 +8,13 @@ body {
     text-align: center;
 }
 header {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    background-image: url('assets/logo.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 400px; /* Or whatever height you want */
 }
+
 
 header img {
     width: 100%;
