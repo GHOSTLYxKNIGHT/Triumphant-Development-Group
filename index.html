@@ -1,289 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Triumphant Development Group</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/favicon.png" type="image/png">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #111;
-            color: #eee;
-            text-align: left;
-        }
-        nav {
-            background-color: #1a1a1a;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        nav button {
-            background: none;
-            border: none;
-            color: #ccc;
-            font-size: 16px;
-            padding: 10px 15px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-weight: bold;
-        }
-        nav button:hover,
-        nav button.active {
-            color: #fff;
-            border-bottom: 2px solid #007bff;
-        }
-        section {
-            display: none;
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        section.active {
-            display: block;
-            opacity: 1;
-        }
-    </style>
-    <!-- Required for link previews -->
-<meta property="og:title" content="Triumphant Development Group">
-<meta property="og:description" content="A passionate indie studio creating immersive, emotional, and tactically rich games.">
-<meta property="og:image" content="https://raw.githubusercontent.com/GHOSTLYxKNIGHT/Triumphant-Development-Group/refs/heads/main/assets/logo.png">
-<meta property="og:url" content="https://ghostlyxknight.github.io/Triumphant-Development-Group/">
-<meta property="og:type" content="website">
-
-<!-- Optional Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Triumphant Development Group">
-<meta name="twitter:description" content="A passionate indie studio creating immersive, emotional, and tactically rich games.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/GHOSTLYxKNIGHT/Triumphant-Development-Group/refs/heads/main/assets/logo.png">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Triumphant Development Group</title>
+  <meta name="description" content="Triumphant Development Group – Crafting immersive worlds." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: dark light; }
+    html { scroll-behavior: smooth; }
+    .font-display { font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Inter, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+    .font-body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+    .glass { backdrop-filter: saturate(160%) blur(10px); background: rgba(17,17,19,0.6); }
+  </style>
 </head>
-<body>
-
-    <!-- ✅ Banner Section -->
-<header>
-  <div class="header-content">
-    <h1>TRIUMPHANT</h1>
-
-    <p>DEVELOPMENT GROUP</p>
-  </div>
-</header>
-
-
-
-<nav>
-    <button onclick="showTab('home')">Home</button>
-    <button onclick="showTab('updates')">Development Roadmap</button>
-    <button onclick="showTab('about')">Staff Team</button>
-    <button onclick="showTab('join')">Join Us</button>
-</nav>
-
-<section id="home" class="active">
-    <h2>Welcome</h2>
-    <p>Welcome to Triumphant Development Group — a passionate indie studio building immersive, emotional, and tactically rich games.</p>
-    <p>Explore our roadmap, meet the team, and see how you can get involved in our growing community of creators and players.</p>
-
-    <h3>🎮 Our Projects</h3>
-
-    <div class="game-project">
-        <img src="assets/iron-horizon-logo.png" alt="Iron Horizon Logo" style="width: 160px;">
-        <p><strong>Iron Horizon</strong> – A hyper-realistic FPS set in a near-future Southeast U.S. following a brutal invasion. Fight as one of five friends turned resistance fighters in a massive 1:1 scale sandbox map across Florida, Georgia, and Alabama. With realistic gunplay, tactical survival, and emotional storytelling, Iron Horizon is our flagship narrative combat experience.</p>
+<body class="bg-neutral-950 text-neutral-100 font-body">
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="mt-4 flex items-center justify-between rounded-2xl glass border border-neutral-800/60 p-3 shadow-lg">
+        <a href="#top" class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-yellow-300 to-amber-600 shadow"></div>
+          <span class="font-display text-lg tracking-wide">Triumphant Development Group</span>
+        </a>
+        <nav class="hidden gap-6 md:flex">
+          <a class="hover:text-yellow-300 transition" href="#games">Games</a>
+          <a class="hover:text-yellow-300 transition" href="#roadmap">Roadmap</a>
+          <a class="hover:text-yellow-300 transition" href="#blog">News</a>
+          <a class="hover:text-yellow-300 transition" href="#about">About</a>
+          <a class="hover:text-yellow-300 transition" href="#contact">Contact</a>
+        </nav>
+        <a href="https://discord.gg/" class="rounded-xl bg-yellow-400 px-4 py-2 font-medium text-neutral-900 shadow hover:bg-yellow-300 transition">Join Discord</a>
+      </div>
     </div>
+  </header>
 
-    <div class="game-project">
-        <img src="assets/cypress-root-logo.png" alt="Cypress Root Logo" style="width: 160px;">
-        <p><strong>Cypress Root</strong> – A peaceful yet demanding life-sim RPG inspired by the simple country life. You escape the noise of city life only to find a forgotten rural town in desperate need of revival. Raise livestock, grow crops, fish, hunt, and build relationships in a Florida forest community shaped by your choices.</p>
+  <!-- Hero -->
+  <section id="top" class="relative isolate overflow-hidden pt-40 pb-24">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute inset-0 bg-[radial-gradient(1200px_600px_at_30%_-10%,rgba(234,179,8,0.20),rgba(0,0,0,0))]"></div>
+      <img src="https://images.unsplash.com/photo-1520975693411-1fdfefcd3dc1?q=80&w=1920&auto=format&fit=crop" alt="Cinematic background" class="h-full w-full object-cover opacity-20" />
     </div>
-
-    <div class="game-project">
-        <img src="assets/roots-of-silence-logo.png" alt="Roots of Silence Logo" style="width: 160px;">
-        <p><strong>Roots of Silence</strong> – A narrative-driven coming-of-age story set in the Everglades. Follow Ryan Anderson from age 5 to 17 as he navigates a world of trauma, violence, and survival. This emotional game explores childhood hardship, resilience, and the small moments of light that break through the darkness. This title has a sequel, known as Shielded.</p>
+    <div class="mx-auto max-w-7xl px-4 text-center">
+      <h1 class="font-display text-4xl md:text-6xl font-extrabold tracking-tight">
+        Crafting <span class="text-yellow-400">Immersive</span> Worlds
+      </h1>
+      <p class="mx-auto mt-5 max-w-3xl text-neutral-300 text-lg">Indie studio building grounded, story-rich experiences: tactical shooters, life sims, and narrative journeys inspired by Florida's landscapes.</p>
+      <div class="mt-8 flex items-center justify-center gap-4">
+        <a href="#games" class="rounded-xl bg-yellow-400 px-6 py-3 font-semibold text-neutral-900 shadow hover:bg-yellow-300 transition">Explore Our Games</a>
+        <a href="#blog" class="rounded-xl border border-neutral-700 px-6 py-3 font-semibold text-neutral-100 hover:border-neutral-500 transition">Read Dev Blog</a>
+      </div>
     </div>
+  </section>
 
-    <div class="game-project">
-        <img src="assets/shielded-logo.png" alt="Shielded Logo" style="width: 160px;">
-        <p><strong>Shielded</strong> – An open-world story that follows Ryan Anderson into a career in law enforcement where realism and moral consequence collide. Patrol streets, handle traffic stops, respond to domestic violence calls, and face the emotional cost of the badge. Choose to uphold your oath or walk a darker path in a game built on trust, trauma, and the thin line between justice and failure.</p>
+  <!-- Games -->
+  <section id="games" class="mx-auto max-w-7xl px-4 py-20">
+    <div class="flex items-end justify-between">
+      <h2 class="font-display text-3xl md:text-4xl font-extrabold">Featured Games</h2>
+      <a href="#" class="text-sm text-neutral-400 hover:text-yellow-300">View all →</a>
     </div>
-</section>
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Card: Iron Horizon -->
+      <article class="group overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/60 shadow hover:shadow-2xl hover:-translate-y-0.5 transition">
+        <div class="aspect-[16/9] overflow-hidden">
+          <img class="h-full w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1600&auto=format&fit=crop" alt="Iron Horizon key art" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl">Iron Horizon</h3>
+          <p class="mt-2 text-sm text-neutral-300">Hyper‑realistic FPS set across the Southeast U.S. Tactical gunplay, survival systems, and a living world.</p>
+          <div class="mt-4 flex items-center gap-3 text-xs text-neutral-400">
+            <span class="rounded-full border border-neutral-700 px-2 py-1">FPS</span>
+            <span class="rounded-full border border-neutral-700 px-2 py-1">Survival</span>
+            <span class="rounded-full border border-neutral-700 px-2 py-1">UE 5.6</span>
+          </div>
+        </div>
+      </article>
+      <!-- Card: Cypress Root -->
+      <article class="group overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/60 shadow hover:shadow-2xl hover:-translate-y-0.5 transition">
+        <div class="aspect-[16/9] overflow-hidden">
+          <img class="h-full w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1603287681836-b0a1f4a2b6b0?q=80&w=1600&auto=format&fit=crop" alt="Cypress Root key art" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl">Cypress Root</h3>
+          <p class="mt-2 text-sm text-neutral-300">A cozy, stylized life‑sim set in a Florida forest town. Farming, romance, restoration, and community.</p>
+          <div class="mt-4 flex items-center gap-3 text-xs text-neutral-400">
+            <span class="rounded-full border border-neutral-700 px-2 py-1">Life Sim</span>
+            <span class="rounded-full border border-neutral-700 px-2 py-1">RPG</span>
+            <span class="rounded-full border border-neutral-700 px-2 py-1">UE 5.6</span>
+          </div>
+        </div>
+      </article>
+      <!-- Card: Roots of Silence -->
+      <article class="group overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/60 shadow hover:shadow-2xl hover:-translate-y-0.5 transition">
+        <div class="aspect-[16/9] overflow-hidden">
+          <img class="h-full w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Roots of Silence key art" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-display text-xl">Roots of Silence</h3>
+          <p class="mt-2 text-sm text-neutral-300">A narrative journey from childhood to adolescence—trauma, resilience, and choice in the Everglades.</p>
+          <div class="mt-4 flex items-center gap-3 text-xs text-neutral-400">
+            <span class="rounded-full border border-neutral-700 px-2 py-1">Narrative</span>
+            <span class="rounded-full border border-neutral-700 px-2 py-1">Story‑Driven</span>
+            <span class="rounded-full border border-neutral-700 px-2 py-1">MetaHuman</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
 
+  <!-- Roadmap -->
+  <section id="roadmap" class="mx-auto max-w-7xl px-4 py-20">
+    <h2 class="font-display text-3xl md:text-4xl font-extrabold">Studio Roadmap</h2>
+    <ol class="mt-10 relative border-l border-neutral-800 pl-6">
+      <li class="mb-10 ml-4">
+        <div class="absolute -left-2 mt-1 h-3 w-3 rounded-full bg-yellow-400"></div>
+        <time class="text-sm text-neutral-400">Q3 2025</time>
+        <h3 class="font-display text-xl mt-1">Public Site + Community Alpha Prep</h3>
+        <p class="text-neutral-300 text-sm">Launch website, publish dev blogs, and start closed testing interest for <em>Iron Horizon</em>.</p>
+      </li>
+      <li class="mb-10 ml-4">
+        <div class="absolute -left-2 mt-1 h-3 w-3 rounded-full bg-yellow-400"></div>
+        <time class="text-sm text-neutral-400">Q4 2025</time>
+        <h3 class="font-display text-xl mt-1">Cypress Root Vertical Slice</h3>
+        <p class="text-neutral-300 text-sm">Core farming loop, romance prototypes, and town restoration milestones.</p>
+      </li>
+      <li class="ml-4">
+        <div class="absolute -left-2 mt-1 h-3 w-3 rounded-full bg-yellow-400"></div>
+        <time class="text-sm text-neutral-400">2026</time>
+        <h3 class="font-display text-xl mt-1">Playtests & Press Kit</h3>
+        <p class="text-neutral-300 text-sm">Open playtests, media kit release, and Steam page reveals.</p>
+      </li>
+    </ol>
+  </section>
 
+  <!-- Blog / News -->
+  <section id="blog" class="mx-auto max-w-7xl px-4 py-20">
+    <div class="flex items-end justify-between">
+      <h2 class="font-display text-3xl md:text-4xl font-extrabold">News & Dev Blog</h2>
+      <a href="#" class="text-sm text-neutral-400 hover:text-yellow-300">All posts →</a>
+    </div>
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+      <article class="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6 shadow">
+        <h3 class="font-display text-xl">Welcome to Triumphant</h3>
+        <p class="mt-2 text-sm text-neutral-300">We’re kicking off our public dev blog with a look at our studio pillars and what to expect in upcoming updates.</p>
+        <a href="#" class="mt-4 inline-block text-yellow-400 hover:text-yellow-300">Read more →</a>
+      </article>
+      <article class="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6 shadow">
+        <h3 class="font-display text-xl">Iron Horizon – Inventory Deep Dive</h3>
+        <p class="mt-2 text-sm text-neutral-300">A breakdown of our Tarkov-style inventory system: weight, secure pouch logic, and multiplayer sync.</p>
+        <a href="#" class="mt-4 inline-block text-yellow-400 hover:text-yellow-300">Read more →</a>
+      </article>
+    </div>
+  </section>
 
-<section id="updates">
-    <h2>Development Roadmap</h2>
-
-    <article>
-        <h3>v0.2.0 – Inventory UI Overhaul <small>(Sep 10, 2025)</small></h3>
-        <ul>
-            <li>Drag-and-drop grid inventory</li>
-            <li>Hotbar slot linking</li>
-            <li>Secure pouch logic</li>
+  <!-- About -->
+  <section id="about" class="mx-auto max-w-7xl px-4 py-20">
+    <h2 class="font-display text-3xl md:text-4xl font-extrabold">About the Studio</h2>
+    <div class="mt-6 grid gap-8 md:grid-cols-2">
+      <p class="text-neutral-300">Triumphant Development Group is an indie studio led by James Young in Jacksonville, Florida. We focus on realism, grounded systems, and heartfelt narratives. Our games are built in Unreal Engine 5.6 with attention to Florida’s ecosystems and culture.</p>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6">
+        <h3 class="font-display">Studio Pillars</h3>
+        <ul class="mt-3 space-y-2 text-sm text-neutral-300 list-disc pl-5">
+          <li>Immersive realism without losing fun.</li>
+          <li>Player‑driven stories and meaningful choices.</li>
+          <li>Transparent development and community collaboration.</li>
         </ul>
-    </article>
+      </div>
+    </div>
+  </section>
 
-    <article>
-        <h3>v0.3.0 – Basic Combat & Gunplay <small>(Oct 22, 2025)</small></h3>
-        <ul>
-            <li>Weapon equipping system</li>
-            <li>Gunfire animations</li>
-            <li>Hit registration</li>
-        </ul>
-    </article>
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-7xl px-4 py-20">
+    <h2 class="font-display text-3xl md:text-4xl font-extrabold">Contact</h2>
+    <div class="mt-6 grid gap-8 md:grid-cols-2">
+      <form name="contact" method="POST" data-netlify="true" class="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6">
+        <input type="hidden" name="form-name" value="contact" />
+        <label class="block text-sm text-neutral-300">Your email</label>
+        <input required name="email" type="email" class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-950 p-3" placeholder="you@example.com" />
+        <label class="mt-4 block text-sm text-neutral-300">Message</label>
+        <textarea required name="message" rows="5" class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-950 p-3" placeholder="How can we help?"></textarea>
+        <button class="mt-4 w-full rounded-xl bg-yellow-400 px-4 py-3 font-semibold text-neutral-900 hover:bg-yellow-300 transition">Send</button>
+        <p class="mt-2 text-xs text-neutral-400">Or email: s3220850@students.fscj.edu</p>
+      </form>
+      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6">
+        <h3 class="font-display">Press & Business</h3>
+        <p class="mt-2 text-neutral-300 text-sm">For partnerships, interviews, and keys, reach out with your outlet and scope. A full press kit will be available soon.</p>
+        <div class="mt-6 grid grid-cols-3 gap-3 text-center">
+          <a class="rounded-xl border border-neutral-700 p-4 hover:border-yellow-400 transition" href="#">X</a>
+          <a class="rounded-xl border border-neutral-700 p-4 hover:border-yellow-400 transition" href="#">YouTube</a>
+          <a class="rounded-xl border border-neutral-700 p-4 hover:border-yellow-400 transition" href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <article>
-        <h3>v0.4.0 – Ammo & Ballistics <small>(Dec 03, 2025)</small></h3>
-        <ul>
-            <li>Ammo types</li>
-            <li>Penetration logic</li>
-            <li>Ballistic trajectory simulation</li>
-        </ul>
-    </article>
+  <!-- Footer -->
+  <footer class="border-t border-neutral-900 py-10">
+    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-neutral-400">© <span id="year"></span> Triumphant Development Group. All rights reserved.</p>
+      <nav class="flex gap-6 text-sm text-neutral-400">
+        <a href="#" class="hover:text-yellow-300">Privacy</a>
+        <a href="#" class="hover:text-yellow-300">Terms</a>
+        <a href="#top" class="hover:text-yellow-300">Back to top</a>
+      </nav>
+    </div>
+  </footer>
 
-    <article>
-        <h3>v0.5.0 – Armor & Damage <small>(Jan 14, 2026)</small></h3>
-        <ul>
-            <li>Armor hit zones</li>
-            <li>Blunt vs. piercing logic</li>
-            <li>Health damage modifiers</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>v0.6.0 – Modular Gear Loadouts <small>(Feb 25, 2026)</small></h3>
-        <ul>
-            <li>Custom gear slots</li>
-            <li>Armor classes</li>
-            <li>Tactical vests & helmets</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>v0.7.0 – Camping & Cooking <small>(Apr 08, 2026)</small></h3>
-        <ul>
-            <li>Tents & campfires</li>
-            <li>Cooking UI</li>
-            <li>Food spoilage mechanic</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>v0.8.0 – Crafting System <small>(May 20, 2026)</small></h3>
-        <ul>
-            <li>Workbench UI</li>
-            <li>Scrap system</li>
-            <li>Craftable traps, meds, gear</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>v0.9.0 – Fishing & Hunting <small>(Jul 01, 2026)</small></h3>
-        <ul>
-            <li>Hunting animals</li>
-            <li>Tracking mechanics</li>
-            <li>Fishing minigame</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>v1.0.0 – Vehicles & Driving <small>(Aug 12, 2026)</small></h3>
-        <ul>
-            <li>Vehicle spawn system</li>
-            <li>Driving physics</li>
-            <li>Fuel & repair</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>v1.1.0 – Trading & Outposts <small>(Sep 23, 2026)</small></h3>
-        <ul>
-            <li>Friendly AI outposts</li>
-            <li>Trade economy</li>
-            <li>Reputation logic</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>v1.2.0 – Raiders & Looters <small>(Nov 04, 2026)</small></h3>
-        <ul>
-            <li>Hostile AI groups</li>
-            <li>Base raids</li>
-            <li>Ambush tactics</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>v1.3.0 – Cutscenes & Voice <small>(Dec 16, 2026)</small></h3>
-        <ul>
-            <li>Cinematic camera tools</li>
-            <li>Voice acting integration</li>
-            <li>Dialogue system</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>v1.4.0 – Audio Polish <small>(Jan 27, 2027)</small></h3>
-        <ul>
-            <li>Dynamic ambiance</li>
-            <li>Gun sound realism</li>
-            <li>Footsteps and gear rustle</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>v1.5.0 – Playtest & QA <small>(Mar 10, 2027)</small></h3>
-        <ul>
-            <li>Multiplayer sync stress test</li>
-            <li>Bug fixing</li>
-            <li>Steam build prep</li>
-        </ul>
-    </article>
-</section>
-
-<section id="about">
-    <h2>About Us – Staff Team</h2>
-    <ul>
-        <li><strong>James Young</strong> – Co-Owner / CEO / Project Lead / Gameplay Engineer</li>
-        <li><strong>mistanastytime904</strong> – Co-Owner / COO / HR Lead / Marketing President</li>
-        <li><strong>OPEN POSITION</strong> – </li>
-        <li><strong>OPEN POSITION</strong> – </li>
-        <li><strong>OPEN POSITION</strong> – </li>
-        <li><strong>OPEN POSITION</strong> – </li>
-    </ul>
-</section>
-
-<section id="join">
-    <h2>Join Us</h2>
-    <p>Join our Discord to follow development, get sneak peeks, report bugs, or even help us test and build new features.</p>
-    <p>Upcoming projects include:</p>
-    <ul>
-        <li><strong>Iron Horizon</strong> – A hyper-realistic FPS set in the modern Southeast U.S.</li>
-        <li><strong>Cypress Root</strong> – A peaceful life-sim set in rural Florida</li>
-        <li><strong>Roots of Silence</strong> – A gritty childhood survival story</li>
-        <li><strong>Shielded</strong> – A grounded police simulator with a morality system</li>
-    </ul>
-    <p><a href="https://discord.gg/JcEppb2M87" target="_blank">💬 Join Our Discord</a></p>
-</section>
-
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.querySelectorAll('nav button').forEach(button => {
-                button.classList.remove('active');
-            });
-            document.getElementById(tabId).classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            showTab('home');
-        });
-    </script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
