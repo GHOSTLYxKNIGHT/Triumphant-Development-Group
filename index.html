@@ -39,25 +39,44 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="top" class="relative isolate overflow-hidden pt-40 pb-24">
-    <div class="absolute inset-0 -z-10">
-      <!-- Safer gradient using built-in utilities (no arbitrary values) -->
-      <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/20 via-transparent to-transparent"></div>
-      <!-- Background image as a true cover layer -->
-      <img src="assets/logo.png" alt="Cinematic background" class="absolute inset-0 h-full w-full object-cover opacity-20" />
+<!-- Hero -->
+<section id="top" class="relative isolate overflow-hidden pt-40 pb-24">
+  <div class="absolute inset-0 -z-10">
+    <!-- Background video -->
+    <video
+      class="absolute inset-0 h-full w-full object-cover opacity-20"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="assets/everglades-poster.jpg"
+    >
+      <source src="assets/everglades.webm" type="video/webm" />
+      <source src="assets/everglades.mp4" type="video/mp4" />
+      <!-- Fallback image if video isn't supported -->
+      <img src="assets/everglades-poster.jpg" alt="Everglades background" />
+    </video>
+
+    <!-- Overlays above video -->
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/20 via-transparent to-transparent"></div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 text-center">
+    <h1 class="font-display text-4xl md:text-6xl font-extrabold tracking-tight">
+      Crafting <span class="text-yellow-400">Immersive</span> Worlds
+    </h1>
+    <p class="mx-auto mt-5 max-w-3xl text-neutral-300 text-lg">
+      Indie studio building grounded, story-rich experiences: tactical shooters, life sims, and narrative journeys inspired by Florida's landscapes.
+    </p>
+    <div class="mt-8 flex items-center justify-center gap-4">
+      <a href="#games" class="rounded-xl bg-yellow-400 px-6 py-3 font-semibold text-neutral-900 shadow hover:bg-yellow-300 transition">Explore Our Games</a>
+      <a href="#blog" class="rounded-xl border border-neutral-700 px-6 py-3 font-semibold text-neutral-100 hover:border-neutral-500 transition">Read Dev Blog</a>
     </div>
-    <div class="mx-auto max-w-7xl px-4 text-center">
-      <h1 class="font-display text-4xl md:text-6xl font-extrabold tracking-tight">
-        Crafting <span class="text-yellow-400">Immersive</span> Worlds
-      </h1>
-      <p class="mx-auto mt-5 max-w-3xl text-neutral-300 text-lg">Indie studio building grounded, story-rich experiences: tactical shooters, life sims, and narrative journeys inspired by Florida's landscapes.</p>
-      <div class="mt-8 flex items-center justify-center gap-4">
-        <a href="#games" class="rounded-xl bg-yellow-400 px-6 py-3 font-semibold text-neutral-900 shadow hover:bg-yellow-300 transition">Explore Our Games</a>
-        <a href="#blog" class="rounded-xl border border-neutral-700 px-6 py-3 font-semibold text-neutral-100 hover:border-neutral-500 transition">Read Dev Blog</a>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Games -->
   <section id="games" class="mx-auto max-w-7xl px-4 py-20">
