@@ -33,7 +33,7 @@
           <a class="hover:text-yellow-300 transition" href="#about">About</a>
           <a class="hover:text-yellow-300 transition" href="#contact">Contact</a>
         </nav>
-        <a href="https://discord.gg/" class="rounded-xl bg-yellow-400 px-4 py-2 font-medium text-neutral-900 shadow hover:bg-yellow-300 transition">Join Discord</a>
+        <a href="https://discord.gg/JcEppb2M87" class="rounded-xl bg-yellow-400 px-4 py-2 font-medium text-neutral-900 shadow hover:bg-yellow-300 transition">Join Discord</a>
       </div>
     </div>
   </header>
@@ -41,8 +41,10 @@
   <!-- Hero -->
   <section id="top" class="relative isolate overflow-hidden pt-40 pb-24">
     <div class="absolute inset-0 -z-10">
-      <div class="absolute inset-0 bg-[radial-gradient(1200px_600px_at_30%_-10%,rgba(234,179,8,0.20),rgba(0,0,0,0))]"></div>
-      <img src="https://images.unsplash.com/photo-1520975693411-1fdfefcd3dc1?q=80&w=1920&auto=format&fit=crop" alt="Cinematic background" class="h-full w-full object-cover opacity-20" />
+      <!-- Safer gradient using built-in utilities (no arbitrary values) -->
+      <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/20 via-transparent to-transparent"></div>
+      <!-- Background image as a true cover layer -->
+      <img src="assets/logo.png" alt="Cinematic background" class="absolute inset-0 h-full w-full object-cover opacity-20" />
     </div>
     <div class="mx-auto max-w-7xl px-4 text-center">
       <h1 class="font-display text-4xl md:text-6xl font-extrabold tracking-tight">
@@ -66,7 +68,7 @@
       <!-- Card: Iron Horizon -->
       <article class="group overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/60 shadow hover:shadow-2xl hover:-translate-y-0.5 transition">
         <div class="aspect-[16/9] overflow-hidden">
-          <img class="h-full w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1600&auto=format&fit=crop" alt="Iron Horizon key art" />
+          <img class="h-full w-full object-cover transition group-hover:scale-105" src="assets/iron-horizon-logo.png" alt="Iron Horizon key art" />
         </div>
         <div class="p-5">
           <h3 class="font-display text-xl">Iron Horizon</h3>
@@ -81,7 +83,7 @@
       <!-- Card: Cypress Root -->
       <article class="group overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/60 shadow hover:shadow-2xl hover:-translate-y-0.5 transition">
         <div class="aspect-[16/9] overflow-hidden">
-          <img class="h-full w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1603287681836-b0a1f4a2b6b0?q=80&w=1600&auto=format&fit=crop" alt="Cypress Root key art" />
+          <img class="h-full w-full object-cover transition group-hover:scale-105" src="assets/cypress-root-logo.png" alt="Cypress Root key art" />
         </div>
         <div class="p-5">
           <h3 class="font-display text-xl">Cypress Root</h3>
@@ -96,7 +98,7 @@
       <!-- Card: Roots of Silence -->
       <article class="group overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/60 shadow hover:shadow-2xl hover:-translate-y-0.5 transition">
         <div class="aspect-[16/9] overflow-hidden">
-          <img class="h-full w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" alt="Roots of Silence key art" />
+          <img class="h-full w-full object-cover transition group-hover:scale-105" src="assets/roots-of-silence-logo.png" alt="Roots of Silence key art" />
         </div>
         <div class="p-5">
           <h3 class="font-display text-xl">Roots of Silence</h3>
@@ -150,7 +152,7 @@
       </article>
       <article class="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6 shadow">
         <h3 class="font-display text-xl">Iron Horizon – Inventory Deep Dive</h3>
-        <p class="mt-2 text-sm text-neutral-300">A breakdown of our Tarkov-style inventory system: weight, secure pouch logic, and multiplayer sync.</p>
+        <p class="mt-2 text-sm text-neutral-300">A breakdown of our Grid-style inventory system: weight, secure pouch logic, and multiplayer sync.</p>
         <a href="#" class="mt-4 inline-block text-yellow-400 hover:text-yellow-300">Read more →</a>
       </article>
     </div>
@@ -160,7 +162,7 @@
   <section id="about" class="mx-auto max-w-7xl px-4 py-20">
     <h2 class="font-display text-3xl md:text-4xl font-extrabold">About the Studio</h2>
     <div class="mt-6 grid gap-8 md:grid-cols-2">
-      <p class="text-neutral-300">Triumphant Development Group is an indie studio led by James Young in Jacksonville, Florida. We focus on realism, grounded systems, and heartfelt narratives. Our games are built in Unreal Engine 5.6 with attention to Florida’s ecosystems and culture.</p>
+      <p class="text-neutral-300">Triumphant Development Group is an indie studio led by James Young and MistaNastyTime904 out of Jacksonville, Florida. We focus on realism, grounded systems, and heartfelt narratives. Our games are built in Unreal Engine 5.6 with attention to Florida’s ecosystems and culture.</p>
       <div class="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6">
         <h3 class="font-display">Studio Pillars</h3>
         <ul class="mt-3 space-y-2 text-sm text-neutral-300 list-disc pl-5">
@@ -183,7 +185,7 @@
         <label class="mt-4 block text-sm text-neutral-300">Message</label>
         <textarea required name="message" rows="5" class="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-950 p-3" placeholder="How can we help?"></textarea>
         <button class="mt-4 w-full rounded-xl bg-yellow-400 px-4 py-3 font-semibold text-neutral-900 hover:bg-yellow-300 transition">Send</button>
-        <p class="mt-2 text-xs text-neutral-400">Or email: s3220850@students.fscj.edu</p>
+        <p class="mt-2 text-xs text-neutral-400">Or email: Triumphantdevelopementgroup@gmail.com</p>
       </form>
       <div class="rounded-2xl border border-neutral-800 bg-neutral-900/60 p-6">
         <h3 class="font-display">Press & Business</h3>
