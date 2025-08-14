@@ -41,27 +41,12 @@
 
 <!-- Hero -->
 <section id="top" class="relative isolate overflow-hidden pt-40 pb-24">
-    <!-- Background video -->
-    <video
-      class="absolute inset-0 h-full w-full object-cover opacity-20"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      poster="assets/everglades-poster.jpg"
-    >
-      <source src="assets/everglades.webm" type="video/webm" />
-      <source src="assets/everglades.mp4" type="video/mp4" />
-      <!-- Fallback image if video isn't supported -->
-      <img src="assets/everglades-poster.jpg" alt="Everglades background" />
-    </video>
-
-    <!-- Overlays above video -->
-    <div class="absolute inset-0 bg-black/40"></div>
+  <div class="absolute inset-0 -z-10">
+    <!-- Gradient overlay -->
     <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/20 via-transparent to-transparent"></div>
+    <!-- Background image -->
+    <img src="assets/logo.jpg" alt="Cinematic background" class="absolute inset-0 h-full w-full object-cover opacity-20" />
   </div>
-
   <div class="mx-auto max-w-7xl px-4 text-center">
     <h1 class="font-display text-4xl md:text-6xl font-extrabold tracking-tight">
       Crafting <span class="text-yellow-400">Immersive</span> Worlds
@@ -75,6 +60,7 @@
     </div>
   </div>
 </section>
+
 
 
   <!-- Games -->
