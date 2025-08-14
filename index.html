@@ -40,21 +40,21 @@
   </header>
 
 <!-- Hero -->
-<section id="top" class="relative isolate overflow-hidden min-h-screen flex flex-col bg-[#0f0f11]">
+<section id="top" class="relative isolate overflow-hidden min-h-screen bg-[#0f0f11]">
   <!-- Full-section forest background -->
   <img src="assets/forest.png" alt="Forest background" class="absolute inset-0 h-full w-full object-cover -z-20" />
 
   <!-- Yellow-to-dark cinematic gradient -->
   <div class="absolute inset-0 bg-gradient-to-b from-yellow-400/20 via-black/50 to-black -z-10"></div>
 
-  <!-- Logo at top -->
-  <div class="relative pt-16">
-    <img src="assets/logo.jpg" alt="Cinematic background" class="mx-auto w-auto max-h-40" />
+  <!-- Logo pinned to top -->
+  <div class="absolute top-20 left-1/2 -translate-x-1/2 z-10">
+    <img src="assets/logo.jpg" alt="Studio Logo" class="max-h-40 w-auto" />
   </div>
 
-  <!-- Content centered below logo -->
-  <div class="mx-auto max-w-7xl px-4 text-center flex-1 flex flex-col justify-center">
-    <h1 class="font-display text-4xl md:text-6xl font-extrabold tracking-tight">
+  <!-- Content vertically centered -->
+  <div class="relative flex flex-col justify-center items-center min-h-screen px-4 text-center">
+    <h1 class="font-display text-4xl md:text-6xl font-extrabold tracking-tight mt-40">
       Crafting <span class="text-yellow-400">Immersive</span> Worlds
     </h1>
     <p class="mx-auto mt-5 max-w-3xl text-neutral-300 text-lg">
@@ -66,8 +66,6 @@
     </div>
   </div>
 </section>
-
-
 
 
   <!-- Games -->
